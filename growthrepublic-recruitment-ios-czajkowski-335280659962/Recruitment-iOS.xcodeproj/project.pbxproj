@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		760921F0215B90860099C22C /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760921EF215B90860099C22C /* ItemCollectionViewCell.swift */; };
+		760921F2215B90A20099C22C /* ItemCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760921F1215B90A20099C22C /* ItemCollectionViewController.swift */; };
 		A4802C381D8ACB320032AF25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4802C321D8ACB320032AF25 /* AppDelegate.swift */; };
 		A4802C391D8ACB320032AF25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4802C331D8ACB320032AF25 /* Main.storyboard */; };
 		A4802C3A1D8ACB320032AF25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4802C341D8ACB320032AF25 /* Assets.xcassets */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		760921EF215B90860099C22C /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		760921F1215B90A20099C22C /* ItemCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewController.swift; sourceTree = "<group>"; };
 		A4802C1B1D8ACA5F0032AF25 /* Recruitment-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Recruitment-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4802C2A1D8ACA5F0032AF25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4802C321D8ACB320032AF25 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +90,7 @@
 		760921ED215B810D0099C22C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				760921F1215B90A20099C22C /* ItemCollectionViewController.swift */,
 				A4802C361D8ACB320032AF25 /* TableViewController.swift */,
 				A4802C371D8ACB320032AF25 /* DetailsViewController.swift */,
 			);
@@ -97,6 +102,7 @@
 			children = (
 				A4802C331D8ACB320032AF25 /* Main.storyboard */,
 				A4802C351D8ACB320032AF25 /* LaunchScreen.storyboard */,
+				760921EF215B90860099C22C /* ItemCollectionViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -120,24 +126,16 @@
 		A4802C1D1D8ACA5F0032AF25 /* Recruitment-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				A4802C3E1D8ACB6E0032AF25 /* Networking */,
-				A4802C2A1D8ACA5F0032AF25 /* Info.plist */,
-				A4802C321D8ACB320032AF25 /* AppDelegate.swift */,
-				A4802C341D8ACB320032AF25 /* Assets.xcassets */,
-			);
-			path = "Recruitment-iOS";
-			sourceTree = "<group>";
-		};
-		A4802C3E1D8ACB6E0032AF25 /* Networking */ = {
-			isa = PBXGroup;
-			children = (
 				760921EE215B811B0099C22C /* View */,
 				760921ED215B810D0099C22C /* ViewControllers */,
 				760921EC215B80BA0099C22C /* NetworkManager */,
 				760921EA215B80870099C22C /* Database */,
 				760921E9215B72790099C22C /* Model */,
+				A4802C2A1D8ACA5F0032AF25 /* Info.plist */,
+				A4802C321D8ACB320032AF25 /* AppDelegate.swift */,
+				A4802C341D8ACB320032AF25 /* Assets.xcassets */,
 			);
-			name = Networking;
+			path = "Recruitment-iOS";
 			sourceTree = "<group>";
 		};
 		A4802C3F1D8ACB740032AF25 /* JSON */ = {
@@ -236,8 +234,10 @@
 				A4802C3C1D8ACB320032AF25 /* TableViewController.swift in Sources */,
 				A4802C521D8ACB840032AF25 /* NetworkingManager.swift in Sources */,
 				A4802C531D8ACB840032AF25 /* ItemDetailsModel.swift in Sources */,
+				760921F0215B90860099C22C /* ItemCollectionViewCell.swift in Sources */,
 				A4802C501D8ACB840032AF25 /* ItemModel.swift in Sources */,
 				A4802C3D1D8ACB320032AF25 /* DetailsViewController.swift in Sources */,
+				760921F2215B90A20099C22C /* ItemCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
