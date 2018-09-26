@@ -68,9 +68,11 @@ class NetworkingManager: NSObject {
     }
     
     private func request(filename:String, completionBlock:@escaping (Dictionary<String, AnyObject>) -> Void) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+        DispatchQueue.global(qos: .background).async{
             if let dictionary = JSONParser.jsonFromFilename(filename) {
-                completionBlock(dictionary)
+                DispatchQueue.main.async {
+                    completionBlock(dictionary)
+                }
             } else {
                 completionBlock([:])
             }
