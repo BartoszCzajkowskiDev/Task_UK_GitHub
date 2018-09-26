@@ -57,6 +57,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		760921E9215B72790099C22C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A4802C4C1D8ACB840032AF25 /* ItemModel.swift */,
+				A4802C4F1D8ACB840032AF25 /* ItemDetailsModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		760921EA215B80870099C22C /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				A4802C3F1D8ACB740032AF25 /* JSON */,
+			);
+			name = Database;
+			sourceTree = "<group>";
+		};
+		760921EC215B80BA0099C22C /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				A4802C4E1D8ACB840032AF25 /* NetworkingManager.swift */,
+				A4802C4D1D8ACB840032AF25 /* JSONParser.swift */,
+			);
+			name = NetworkManager;
+			sourceTree = "<group>";
+		};
+		760921ED215B810D0099C22C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A4802C361D8ACB320032AF25 /* TableViewController.swift */,
+				A4802C371D8ACB320032AF25 /* DetailsViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		760921EE215B811B0099C22C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A4802C331D8ACB320032AF25 /* Main.storyboard */,
+				A4802C351D8ACB320032AF25 /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		A4802C121D8ACA5F0032AF25 = {
 			isa = PBXGroup;
 			children = (
@@ -79,11 +123,7 @@
 				A4802C3E1D8ACB6E0032AF25 /* Networking */,
 				A4802C2A1D8ACA5F0032AF25 /* Info.plist */,
 				A4802C321D8ACB320032AF25 /* AppDelegate.swift */,
-				A4802C331D8ACB320032AF25 /* Main.storyboard */,
 				A4802C341D8ACB320032AF25 /* Assets.xcassets */,
-				A4802C351D8ACB320032AF25 /* LaunchScreen.storyboard */,
-				A4802C361D8ACB320032AF25 /* TableViewController.swift */,
-				A4802C371D8ACB320032AF25 /* DetailsViewController.swift */,
 			);
 			path = "Recruitment-iOS";
 			sourceTree = "<group>";
@@ -91,11 +131,11 @@
 		A4802C3E1D8ACB6E0032AF25 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				A4802C3F1D8ACB740032AF25 /* JSON */,
-				A4802C4C1D8ACB840032AF25 /* ItemModel.swift */,
-				A4802C4D1D8ACB840032AF25 /* JSONParser.swift */,
-				A4802C4E1D8ACB840032AF25 /* NetworkingManager.swift */,
-				A4802C4F1D8ACB840032AF25 /* ItemDetailsModel.swift */,
+				760921EE215B811B0099C22C /* View */,
+				760921ED215B810D0099C22C /* ViewControllers */,
+				760921EC215B80BA0099C22C /* NetworkManager */,
+				760921EA215B80870099C22C /* Database */,
+				760921E9215B72790099C22C /* Model */,
 			);
 			name = Networking;
 			sourceTree = "<group>";

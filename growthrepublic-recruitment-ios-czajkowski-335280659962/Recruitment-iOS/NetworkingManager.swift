@@ -27,6 +27,8 @@ class NetworkingManager: NSObject {
             let array = data as! Array<Dictionary<String, AnyObject>>
             var result:[ItemModel] = []
             for item in array {
+                // added
+                let id = item["id"] as? String
                 let name = item["attributes"]?["name"] as? String
                 let colorString = item["attributes"]?["color"] as? String
                 var color:UIColor?
@@ -38,10 +40,14 @@ class NetworkingManager: NSObject {
                 case "Purple": color = UIColor.purple
                 default: color = UIColor.black
                 }
-                let itemModel = ItemModel(name: name!, color: color!)
+                // added
+                let itemModel = ItemModel(name: name!, color: color!, id: id!)
                 result.append(itemModel)
+                
             }
-            self.delegate?.downloadedItems(result)
+            // added:
+            let orderedItems = self.orderItemsById(parsedItems: result)
+            self.delegate?.downloadedItems(orderedItems)
         }
     }
     
@@ -49,6 +55,8 @@ class NetworkingManager: NSObject {
         let filename = "Item\(id).json"
         request(filename: filename) { dictionary in
             let data = dictionary["data"]
+            // added:
+            let id = data!["id"]! as? String
             let attributes = data!["attributes"]! as! Dictionary<String, AnyObject>
             let name = attributes["name"] as? String
             let colorString = attributes["color"] as? String
@@ -62,7 +70,8 @@ class NetworkingManager: NSObject {
             default: color = UIColor.black
             }
             let desc = attributes["desc"] as? String
-            let itemModelDetails = ItemDetailsModel(name: name!, color: color!, desc: desc!)
+            // added:
+            let itemModelDetails = ItemDetailsModel(name: name!, color: color!, id: id!, desc: desc!)
             self.delegate?.downloadedItemDetails(itemModelDetails)
         }
     }
@@ -77,6 +86,10 @@ class NetworkingManager: NSObject {
                 completionBlock([:])
             }
         }
+    }
+    
+    func orderItemsById(parsedItems: [ItemModel]) -> [ItemModel]{
+        return parsedItems.sorted(by: { $0.id < $1.id })
     }
     
 }

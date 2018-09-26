@@ -12,9 +12,8 @@ class ItemDetailsModel: ItemModel {
 
     var desc:String
     
-    init(name: String, color: UIColor, desc:String) {
+    init(name: String, color: UIColor, id: String, desc:String) {
         self.desc = desc
-        super.init(name: name, color: color)
+        super.init(name: name, color: color, id: id)
     }
-    
 }
