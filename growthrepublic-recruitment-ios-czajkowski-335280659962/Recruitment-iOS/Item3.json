@@ -1,0 +1,11 @@
+{
+    "data" : {
+        "id" : "3",
+        "type" : "ItemDetails",
+        "attributes" : {
+            "name" : "Item3",
+            "color" : "Yellow",
+            "desc" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a lacus felis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam dignissim facilisis quam et malesuada. Sed imperdiet ipsum ut elit porttitor gravida. Nulla a lectus lorem. Proin sed volutpat risus. Aenean malesuada, nisl id finibus pellentesque, nunc felis pulvinar tellus, in commodo nisl urna et leo. Donec ac ante tortor. Pellentesque consequat tellus nec pellentesque euismod. Mauris euismod, leo auctor aliquet lacinia, dui est pulvinar nulla, fermentum dapibus felis leo nec est. Fusce ultrices, risus at ullamcorper cursus, leo sapien mattis arcu, vitae facilisis massa lacus et libero. Etiam sollicitudin augue porttitor tristique convallis. Aenean imperdiet, tortor dictum tristique ullamcorper, nulla nulla convallis tellus, sit amet luctus purus augue ac leo."
+        }
+    }
+}

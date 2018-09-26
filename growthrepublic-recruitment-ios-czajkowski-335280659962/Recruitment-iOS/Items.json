@@ -1,0 +1,49 @@
+{
+    "data" : [
+        {
+            "id" : "2",
+            "type" : "Items",
+            "attributes" : {
+                "name" : "Item2",
+                "preview" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "color" : "Red"
+            }
+        },
+        {
+            "id" : "1",
+            "type" : "Items",
+            "attributes" : {
+                "name" : "Item1",
+                "preview" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dictum eu velit vel ultrices. Ut vulputate scelerisque erat, ut mollis nibh convallis feugiat.",
+                "color" : "Green"
+            }
+        },
+        {
+            "id" : "4",
+            "type" : "Items",
+            "attributes" : {
+                "name" : "Item4",
+                "preview" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dictum eu velit vel ultrices. Ut vulputate scelerisque erat, ut mollis nibh convallis feugiat. Maecenas vulputate tortor in odio egestas bibendum a quis erat.",
+                "color" : "Blue"
+            }
+        },
+        {
+            "id" : "3",
+            "type" : "Items",
+            "attributes" : {
+                "name" : "Item3",
+                "preview" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dictum eu velit vel ultrices. Ut vulputate scelerisque erat, ut mollis nibh convallis feugiat. Maecenas vulputate tortor in odio egestas bibendum a quis erat. Proin volutpat turpis vestibulum elementum congue. Sed vitae sem purus. Morbi placerat sapien eget leo mattis molestie.",
+                "color" : "Yellow"
+            }
+        },
+        {
+            "id" : "5",
+            "type" : "Items",
+            "attributes" : {
+                "name" : "Item5",
+                "preview" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dictum eu velit vel ultrices. Ut vulputate scelerisque erat, ut mollis nibh convallis feugiat. Maecenas vulputate tortor in odio egestas bibendum a quis erat. Proin volutpat turpis vestibulum elementum congue. ",
+                "color" : "Purple"
+            }
+        }
+    ]
+}
