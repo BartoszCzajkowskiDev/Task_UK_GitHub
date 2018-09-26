@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -130,27 +131,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Loading..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PV4-Rb-rhK">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Loading..." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="PV4-Rb-rhK">
+                                <rect key="frame" x="16" y="122" width="343" height="476"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXj-7b-Z2v">
+                                <rect key="frame" x="16" y="72" width="343" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="bTl-pg-uQJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="PV4-Rb-rhK" firstAttribute="top" secondItem="gcf-1c-554" secondAttribute="top" id="9c4-GU-VPT"/>
-                            <constraint firstItem="PV4-Rb-rhK" firstAttribute="leading" secondItem="gcf-1c-554" secondAttribute="leading" id="GKH-P6-6gN"/>
-                            <constraint firstAttribute="trailing" secondItem="PV4-Rb-rhK" secondAttribute="trailing" id="R61-Gi-aPB"/>
-                            <constraint firstAttribute="bottom" secondItem="PV4-Rb-rhK" secondAttribute="bottom" id="ekr-Cd-Qmz"/>
+                            <constraint firstItem="sXj-7b-Z2v" firstAttribute="trailing" secondItem="gcf-1c-554" secondAttribute="trailingMargin" id="Bx2-Ze-Ril"/>
+                            <constraint firstItem="PV4-Rb-rhK" firstAttribute="top" secondItem="sXj-7b-Z2v" secondAttribute="bottom" constant="15" id="Gqx-BM-Cn1"/>
+                            <constraint firstItem="sXj-7b-Z2v" firstAttribute="top" secondItem="Ljc-sq-qn6" secondAttribute="bottom" constant="8" id="LJx-qg-7Hq"/>
+                            <constraint firstItem="AQl-NV-7aG" firstAttribute="top" secondItem="PV4-Rb-rhK" secondAttribute="bottom" constant="20" id="VO6-Pt-jdo"/>
+                            <constraint firstItem="PV4-Rb-rhK" firstAttribute="leading" secondItem="gcf-1c-554" secondAttribute="leadingMargin" id="ZxL-CG-Zg5"/>
+                            <constraint firstItem="PV4-Rb-rhK" firstAttribute="trailing" secondItem="gcf-1c-554" secondAttribute="trailingMargin" id="gDe-Pe-5sH"/>
+                            <constraint firstItem="sXj-7b-Z2v" firstAttribute="leading" secondItem="gcf-1c-554" secondAttribute="leadingMargin" id="ziS-rB-tus"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="textView" destination="PV4-Rb-rhK" id="hPl-As-wVl"/>
+                        <outlet property="titleLabel" destination="sXj-7b-Z2v" id="cO4-Gt-gXH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OTd-D6-Fjm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3276" y="215"/>
+            <point key="canvasLocation" x="3276" y="214.54272863568218"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ntT-Wm-fuk">

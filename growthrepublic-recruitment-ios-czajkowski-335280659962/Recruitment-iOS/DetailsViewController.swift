@@ -11,6 +11,7 @@ import UIKit
 class DetailsViewController: UIViewController, NetworkingManagerDelegate {
     
     @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var titleLabel: UILabel!
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -24,9 +25,9 @@ class DetailsViewController: UIViewController, NetworkingManagerDelegate {
             newTitle += newLetter
         }
         
-        self.title = newTitle
+        titleLabel.text = newTitle
         self.view.backgroundColor = tableViewController.itemModels[selectedIndex].color
-        
+       
         NetworkingManager.sharedManager.delegate = self
         NetworkingManager.sharedManager.downloadItemWithID("1")
     }
