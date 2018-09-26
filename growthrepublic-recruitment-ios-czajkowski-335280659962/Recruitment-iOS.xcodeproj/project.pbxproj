@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		760921F0215B90860099C22C /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760921EF215B90860099C22C /* ItemCollectionViewCell.swift */; };
 		760921F2215B90A20099C22C /* ItemCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760921F1215B90A20099C22C /* ItemCollectionViewController.swift */; };
+		760921F6215BA8CA0099C22C /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760921F5215BA8CA0099C22C /* ItemTableViewCell.swift */; };
+		7637AE63215BB42F00D92299 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7637AE62215BB42F00D92299 /* Item.swift */; };
 		A4802C381D8ACB320032AF25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4802C321D8ACB320032AF25 /* AppDelegate.swift */; };
 		A4802C391D8ACB320032AF25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4802C331D8ACB320032AF25 /* Main.storyboard */; };
 		A4802C3A1D8ACB320032AF25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4802C341D8ACB320032AF25 /* Assets.xcassets */; };
@@ -30,6 +32,8 @@
 /* Begin PBXFileReference section */
 		760921EF215B90860099C22C /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		760921F1215B90A20099C22C /* ItemCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewController.swift; sourceTree = "<group>"; };
+		760921F5215BA8CA0099C22C /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
+		7637AE62215BB42F00D92299 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		A4802C1B1D8ACA5F0032AF25 /* Recruitment-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Recruitment-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4802C2A1D8ACA5F0032AF25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4802C321D8ACB320032AF25 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +70,7 @@
 			children = (
 				A4802C4C1D8ACB840032AF25 /* ItemModel.swift */,
 				A4802C4F1D8ACB840032AF25 /* ItemDetailsModel.swift */,
+				7637AE62215BB42F00D92299 /* Item.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -90,21 +95,53 @@
 		760921ED215B810D0099C22C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				760921F1215B90A20099C22C /* ItemCollectionViewController.swift */,
-				A4802C361D8ACB320032AF25 /* TableViewController.swift */,
-				A4802C371D8ACB320032AF25 /* DetailsViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
 		};
-		760921EE215B811B0099C22C /* View */ = {
+		760921EE215B811B0099C22C /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
 				A4802C331D8ACB320032AF25 /* Main.storyboard */,
 				A4802C351D8ACB320032AF25 /* LaunchScreen.storyboard */,
-				760921EF215B90860099C22C /* ItemCollectionViewCell.swift */,
 			);
-			name = View;
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		760921F7215BA8F50099C22C /* List */ = {
+			isa = PBXGroup;
+			children = (
+				760921F5215BA8CA0099C22C /* ItemTableViewCell.swift */,
+				A4802C361D8ACB320032AF25 /* TableViewController.swift */,
+			);
+			name = List;
+			sourceTree = "<group>";
+		};
+		760921F8215BA9000099C22C /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				760921FA215BA90F0099C22C /* Details */,
+				760921F9215BA9090099C22C /* Collection */,
+				760921F7215BA8F50099C22C /* List */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		760921F9215BA9090099C22C /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				760921EF215B90860099C22C /* ItemCollectionViewCell.swift */,
+				760921F1215B90A20099C22C /* ItemCollectionViewController.swift */,
+			);
+			name = Collection;
+			sourceTree = "<group>";
+		};
+		760921FA215BA90F0099C22C /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				A4802C371D8ACB320032AF25 /* DetailsViewController.swift */,
+			);
+			name = Details;
 			sourceTree = "<group>";
 		};
 		A4802C121D8ACA5F0032AF25 = {
@@ -126,7 +163,8 @@
 		A4802C1D1D8ACA5F0032AF25 /* Recruitment-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				760921EE215B811B0099C22C /* View */,
+				760921F8215BA9000099C22C /* UI */,
+				760921EE215B811B0099C22C /* Storyboards */,
 				760921ED215B810D0099C22C /* ViewControllers */,
 				760921EC215B80BA0099C22C /* NetworkManager */,
 				760921EA215B80870099C22C /* Database */,
@@ -231,9 +269,11 @@
 			files = (
 				A4802C381D8ACB320032AF25 /* AppDelegate.swift in Sources */,
 				A4802C511D8ACB840032AF25 /* JSONParser.swift in Sources */,
+				760921F6215BA8CA0099C22C /* ItemTableViewCell.swift in Sources */,
 				A4802C3C1D8ACB320032AF25 /* TableViewController.swift in Sources */,
 				A4802C521D8ACB840032AF25 /* NetworkingManager.swift in Sources */,
 				A4802C531D8ACB840032AF25 /* ItemDetailsModel.swift in Sources */,
+				7637AE63215BB42F00D92299 /* Item.swift in Sources */,
 				760921F0215B90860099C22C /* ItemCollectionViewCell.swift in Sources */,
 				A4802C501D8ACB840032AF25 /* ItemModel.swift in Sources */,
 				A4802C3D1D8ACB320032AF25 /* DetailsViewController.swift in Sources */,

@@ -8,15 +8,11 @@
 
 import UIKit
 
-class ItemModel {
-
-    var name:String
-    var color:UIColor
-    var id:String
+class ItemModel : Item {
+    var preview:String
     
-    init(name:String, color:UIColor, id: String) {
-        self.name  = name
-        self.color = color
-        self.id = id
+    init(name: String, color: UIColor, id: String, preview:String) {
+        self.preview = preview
+        super.init(name: name, color: color, id: id)
     }
 }

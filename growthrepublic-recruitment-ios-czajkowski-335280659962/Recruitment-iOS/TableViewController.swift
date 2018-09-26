@@ -11,9 +11,13 @@ import UIKit
 class TableViewController: UITableViewController, NetworkingManagerDelegate {
     
     var itemModels:[ItemModel] = []
+    private let reuseIdentifier = "Cell"
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        tableView.estimatedRowHeight = 200
+        tableView.rowHeight = UITableViewAutomaticDimension
         
         NetworkingManager.sharedManager.delegate = self
         NetworkingManager.sharedManager.downloadItems()
@@ -24,10 +28,11 @@ class TableViewController: UITableViewController, NetworkingManagerDelegate {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CellID", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ItemTableViewCell
         let itemModel = itemModels[indexPath.row]
         cell.backgroundColor = itemModel.color
-        cell.textLabel?.text = itemModel.name
+        cell.titleLabel.text = itemModel.name
+        cell.previewLabel.text = itemModel.preview
         return cell
     }
     

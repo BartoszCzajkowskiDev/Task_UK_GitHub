@@ -8,8 +8,7 @@
 
 import UIKit
 
-class ItemDetailsModel: ItemModel {
-
+class ItemDetailsModel : Item {
     var desc:String
     
     init(name: String, color: UIColor, id: String, desc:String) {

@@ -27,10 +27,11 @@ class NetworkingManager: NSObject {
             let array = data as! Array<Dictionary<String, AnyObject>>
             var result:[ItemModel] = []
             for item in array {
-                // added
                 let id = item["id"] as? String
                 let name = item["attributes"]?["name"] as? String
                 let colorString = item["attributes"]?["color"] as? String
+                // added
+                let preview = item["attributes"]?["preview"] as? String
                 var color:UIColor?
                 switch colorString! {
                 case "Red": color = UIColor.red
@@ -41,7 +42,7 @@ class NetworkingManager: NSObject {
                 default: color = UIColor.black
                 }
                 // added
-                let itemModel = ItemModel(name: name!, color: color!, id: id!)
+                let itemModel = ItemModel(name: name!, color: color!, id: id!, preview: preview!)
                 result.append(itemModel)
                 
             }
@@ -55,11 +56,11 @@ class NetworkingManager: NSObject {
         let filename = "Item\(id).json"
         request(filename: filename) { dictionary in
             let data = dictionary["data"]
-            // added:
             let id = data!["id"]! as? String
             let attributes = data!["attributes"]! as! Dictionary<String, AnyObject>
             let name = attributes["name"] as? String
             let colorString = attributes["color"] as? String
+            
             var color:UIColor?
             switch colorString! {
             case "Red": color = UIColor.red
