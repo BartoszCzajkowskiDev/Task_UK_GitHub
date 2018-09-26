@@ -17,7 +17,12 @@ class DetailsViewController: UIViewController, NetworkingManagerDelegate {
     
     override func viewDidLoad() {
         NetworkingManager.sharedManager.delegate = self
-        NetworkingManager.sharedManager.downloadItemWithID("1")
+        
+        // added:
+        guard let id = itemModel?.id else{
+            return
+        }
+        NetworkingManager.sharedManager.downloadItemWithID(id)
         
         if let item = itemModel{
             let title = item.name
