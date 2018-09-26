@@ -13,23 +13,22 @@ class DetailsViewController: UIViewController, NetworkingManagerDelegate {
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var titleLabel: UILabel!
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        let tableViewController = navigationController?.viewControllers[0] as! TableViewController
-        let selectedIndex = tableViewController.tableView.indexPathForSelectedRow?.row ?? 0
-        let title = tableViewController.itemModels[selectedIndex].name
-        var newTitle = ""
-        for (index, letter) in title.enumerated() {
-            let newLetter = index % 2 == 0 ? String(letter).lowercased() : String(letter).uppercased()
-            newTitle += newLetter
-        }
-        
-        titleLabel.text = newTitle
-        self.view.backgroundColor = tableViewController.itemModels[selectedIndex].color
-       
+    var itemModel: ItemModel?
+    
+    override func viewDidLoad() {
         NetworkingManager.sharedManager.delegate = self
         NetworkingManager.sharedManager.downloadItemWithID("1")
+        
+        if let item = itemModel{
+            let title = item.name
+            var newTitle = ""
+            for (index, letter) in title.enumerated() {
+                let newLetter = index % 2 == 0 ? String(letter).lowercased() : String(letter).uppercased()
+                newTitle += newLetter
+            }
+            titleLabel.text = newTitle
+            self.view.backgroundColor = item.color
+        }
     }
     
     func downloadedItems(_ items: [ItemModel]) {

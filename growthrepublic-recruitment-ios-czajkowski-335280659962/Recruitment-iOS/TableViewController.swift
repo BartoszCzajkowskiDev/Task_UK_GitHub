@@ -39,4 +39,13 @@ class TableViewController: UITableViewController, NetworkingManagerDelegate {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetails" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let destinationController = segue.destination as! DetailsViewController
+                destinationController.itemModel = itemModels[indexPath.row]
+            }
+        }
+    }
+    
 }
