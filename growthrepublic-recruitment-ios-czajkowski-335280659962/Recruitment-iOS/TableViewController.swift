@@ -14,6 +14,7 @@ class TableViewController: UITableViewController, NetworkingManagerDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         NetworkingManager.sharedManager.delegate = self
         NetworkingManager.sharedManager.downloadItems()
     }
@@ -40,7 +41,7 @@ class TableViewController: UITableViewController, NetworkingManagerDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showDetails" {
+        if segue.identifier == "showDetailsFromTableViewController" {
             if let indexPath = tableView.indexPathForSelectedRow {
                 let destinationController = segue.destination as! DetailsViewController
                 destinationController.itemModel = itemModels[indexPath.row]

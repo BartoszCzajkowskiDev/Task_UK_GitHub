@@ -43,5 +43,18 @@ class ItemCollectionViewController: UICollectionViewController, NetworkingManage
     func downloadedItemDetails(_ itemDetails: ItemDetailsModel) {
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetailsFromCollectionViewController" {
+            let destinationController: DetailsViewController = segue.destination as! DetailsViewController
+            let cell = sender as! ItemCollectionViewCell
+            let indexPath = self.collectionView!.indexPath(for: cell)
+            let item = self.itemModels[(indexPath?.row)!] as ItemModel
+            destinationController.itemModel = item
+            
+        }
+    }
+    
+    
 
 }
